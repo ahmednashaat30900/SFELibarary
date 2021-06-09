@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+  }
+  
+  body{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("../images/lib.jpg");
+    background-size: cover;
+  }
+  
+  .contact-page{
+    
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  h2{
+    width: 100%;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 50px;
+  }
+  
+  .contact-info, .contact-form{
+    flex: 1;
+  }
+  
+  .item{
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .icon{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #3494db;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .form h3{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .textb{
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    border: none;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  textarea{
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    padding: 12px;
+    border: none;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .btn{
+    width: 120px;
+    height: 40px;
+    margin-left: auto;
+    background-color: #3494db;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #3494db;
+    transition: .3s linear;
+  }
+  
+  .btn:hover{
+    background-color: transparent;
+    color: #3494db;
+  }
+  
+  @media screen and (max-width: 980px){
+    .contact-page{
+      max-width: 800px;
+    }
+    h2{
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  
+    .contact-info, .contact-form{
+      flex: 100%;
+      margin-bottom: 30px;
+    }
+    .textb{
+      width: 100%;
+    }
+  }
+  .navbar-nav{
+    margin-left: 50%;
+    color: white;
+}
+.navbar-nav li{
+   margin-left: 2%;
+  }
+  .navbar-nav li a{
+    font-size: 25px;
+   font-weight: 700;
+    width: 100%;
+  }
+.navbar .navbar-nav li a:hover{
+    box-shadow: 0 0 5px #33ffff,
+    0 0 5px #66ffff;
+    border-radius: 5px;
+    color: cyan;
+  }
+  .navbar .navbar-brand{
+    background: linear-gradient(120deg,#ff00f7, #00d0ff);
+    font-size: 40px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
+}
+.navbar .navbar-toggler .navbar-toggler-icon{
+    color: black;
+}

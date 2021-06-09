@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+        <a class="navbar-brand" href="index.html">SFE Library</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="novels.html">Cateogories</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+        
+        <div class="regist">
+            <div class="form">
+                <div class="items">
+                    <div class="box signin">
+                        <h2>Already have an acount</h2>
+                        <button class="signinbtn">Sign In</button>
+                    </div>
+                    <div class="box signup">
+                        <h2>Dont have an acount</h2>
+                        <button class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+                <div class="formbx">
+                   <div class="form signinform">
+                       <form action="index.html">
+                           <h3>Sign In</h3>
+                           <input type="text" placeholder="E-Mail">
+                           <input type="password" placeholder="Password">
+                           <input type="submit" value="login">
+                           <a href="#" class="forgot">Forgot password </a>
+                       </form>
+                   </div>
+                   <div class="form signupform">
+                     <div class="error"></div> 
+                    <form method="GET" action="index.html">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="tel" placeholder="Phone number" pattern="^\d{4}\d{3}\d{4}$" 
+                        title="Must contain 11 numbers" required>
+                   <select id="gender"> 
+                       <option value="gender">Select Gender</option>
+                       <option value="gender">Male</option>
+                       <option value="gender">Female</option>
+                   </select>
+                        <input type="text" placeholder="Address">
+                        <input placeholder="password" type="password" id="psw" 
+                        name="psw" pattern="^(?=.*[A-Z]).{1,}(?=.*\d)(?=.*[a-z])(?=.*[!@#$&*]).{8,}$" 
+                        title="Must contain at least one number, one uppercase, lowercase letter, special characters(#$%&@)
+                         and at least 8 or more characters" required>
+                        
+                        <input type="submit" value="Register">
+                     
+                    </form>
+  
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+        
+    </div>
+    <script>
+        const signinbtn = document.querySelector('.signinbtn');
+        const signupbtn = document.querySelector('.signupbtn');
+        const formbx = document.querySelector('.formbx');
+        const regist = document.querySelector('.regist')
+
+        signupbtn.onclick = function(){
+            formbx.classList.add('active')
+            regist.classList.add('active')
+        }
+
+        signinbtn.onclick = function(){
+            formbx.classList.remove('active')
+            regist.classList.remove('active')
+        }
+        const name = document.getElementById('name')
+const password = document.getElementById('password')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
+
+
+
+
+
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+
+    </script>
+     <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

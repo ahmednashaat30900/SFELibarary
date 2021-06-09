@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("../images/lib.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+}
+.sidebar {
+    margin-right: -20px;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    top: 56px;
+  }
+  .content{
+    margin-top: 60px;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .sidebar h1{
+    font-size: 30px;
+    background-color:#333 ;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-top: 8px;
+    font-weight: bold;
+  
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 80px;
+    padding: 1px 16px;
+    
+  }
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+     
+    }
+  }  
+  .main{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  h1 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+  }
+  
+  img {
+    height: 200px;
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+      min-height: 350px;
+      max-height: 390px;
+      
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 25%;
+      min-height:390px ;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .card:hover{
+    transform: scale(1.1);
+  }
+  
+  .card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #85C1E9 40%, #85C1E9 100%);
+  }
+  
+  .card_title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }
+  .navbar{
+    background: rosybrown;
+  }
+  .navbar-nav {
+    margin-left: 50%;
+
+  }
+  .navbar-nav li{
+    margin-left: 5%;
+  }
+  .navbar-nav li a{
+    font-size: 25px;
+    font-weight: 600;
+    color: cyan;
+    width: 100%;
+  }
+  .navbar-nav li a:hover{
+    box-shadow: 0 0 5px #33ffff,
+    0 0 5px #66ffff;
+    border-radius: 5px;
+    color: cyan;
+  }
+  .navbar .navbar-brand{
+    background: linear-gradient(120deg,#ff00f7, #00d0ff);
+    font-size: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
+}
+  
