@@ -205,4 +205,23 @@ body{
     -webkit-text-fill-color:transparent;
     font-weight: bold;
 }
+.table{
+  color:white;
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: 15%;
+  border-radius: 10px;
+  background-color: #333;
+  
+}
+.table td,
+.table th{
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.table tr:hover{
+  background-color: teal;
+  transform: scale(1.1);
+}
+  
   
