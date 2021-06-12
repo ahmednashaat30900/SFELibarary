@@ -223,5 +223,10 @@ body{
   background-color: teal;
   transform: scale(1.1);
 }
+.h h1{
+  color: white;
+  font-size: 20px;
+text-align: center;
+}
   
   
